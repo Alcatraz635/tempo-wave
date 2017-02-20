@@ -23,14 +23,15 @@ const styles = StyleSheet.create({
     resizeMode: 'stretch',
   },
   logo: {
-    flex: 1,
+    flex: 2,
     width: 150,
     height: 150,
     resizeMode: 'contain'
   },
   welcome: {
     flex:3,
-    alignItems:'flex-start',
+    alignItems:'center',
+    justifyContent:"flex-start",
     margin: 10,
   },
   welcomeText: {
@@ -41,7 +42,7 @@ const styles = StyleSheet.create({
 
 export default class Home extends Component {
   static propTypes = {
-    navigate: PropTypes.func.isRequired
+  //  navigate: PropTypes.func.isRequired
   };
 
   toCounter = () => {
@@ -61,7 +62,7 @@ export default class Home extends Component {
           <Text style={styles.welcomeText}>
             Welcome to Tempo Wave!
           </Text>
-          <Button>Help</Button>
+          <Button title="Help" onPres={  () => console.log("Pressed")}>Help</Button>
         </View>
       </Image>
     );
